@@ -1,5 +1,7 @@
 \documentclass[aps,prl,preprint,groupedaddress]{revtex4-2}
 \usepackage{mhchem, siunitx}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{references.bib}
 
 \begin{document}
 \title{Measuring the Planck Constant from the Minimum Wavelength of X-rays in the Bremsstrahlung Continuum}
@@ -35,13 +37,13 @@
     \end{align}
     
 	\begin{figure}
-		\includegraphics{rad_data.png}
+		\includegraphics{res/rad_data.png}
 		\caption{Each set of points represents the
 		                beginning of the bremsstrahlung continuum for a particular voltage,
 		                given by the legend.}
 	\end{figure}
 	\begin{figure}
-		\includegraphics{min_wavelength.png}
+		\includegraphics{res/min_wavelength.png}
 		\caption{Here, we have the minimum wavelength 
 		        corresponding with each voltage.}
 	\end{figure}
@@ -49,5 +51,5 @@
 A sample of the data collected is given in FIG 1. We can see that the data is qualitatively consistent with the smooth curve of the bremsstrahlung continuum. The minimum wavelength data for each $U$ value is shown in FIG 2. By performing the method of least squares on the data in FIG 2., we calculated $A = 1.22(1) \times 10^{-6}~\si{J.m}$. By using the accepted values~\cite{mohr} of $c = 299~792~458~\si{m.s^{-1}}$ and $e = 1.602~176~6208(98) \times 10^{-19}~\si{C}$ (and also noting that the error in $e$ is negligible for our purposes), we use equation (5) and propagate the error in $A$ to compute $h = 6.52(5) \times 10^{-34}~\si{J.s}$. The currently accepted value of the Planck constant is $h = 6.626~070~040(81) \times 10^{-34}~\si{J.s}$ While not without fault, our calculation is indeed more accurate than the value calculated in the Duane-Hunt experiment.
 \section{Discussion}
 The results from our experiment are consistent with the Duane-Hunt relation, and, from these data, we were able to calculate the Planck constant with reasonable accuracy. Some aspects of the experiment could be improved. An increase in the range of rotation of the goniometer may improve in detecting small wavelengths, especially considering that trials 6, 7, and 8 all had readings for wavelengths at $24.6~\si{pm}$ the shortest wavelength our apparatus can detect, and, therefore, the smallest angle between the monocrystal and the x-ray beam. By placing the counter tube slightly closer to the monocrystal we may also be able to detect more radiation. Another improvement could be made by measuring the actual lattice plane spacing of the \ce{NaCl} beforehand, thereby adding a layer of quality control. Beyond natural impurities, the \ce{NaCl} is very delicate, and any faults in the material, or possible absorption of water vapor, would result in incorrect measurements of any $\lambda$, and also $\lambda_{min}$, which accounts for some of the discrepancy between the calculated h and the accepted value.
-\bibliography{resources.bib}
+\printbibliography
 \end{document}
